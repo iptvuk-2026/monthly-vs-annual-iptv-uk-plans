@@ -1,0 +1,59 @@
+/* Monthly vs 12-month #10 — ledger theme: deep espresso brown, warm sand, copper.
+   Account-book layout with a ruled ledger table, a five-point decision checklist
+   and a 12-month cost timeline feel. */
+* { box-sizing: border-box; }
+body { margin: 0; font-family: Georgia, "Times New Roman", serif; color: #2b1d16; background: #f7f1e6; line-height: 1.7; }
+a { color: #9a5b2e; }
+.wrap { max-width: 860px; margin: 0 auto; padding: 0 22px; }
+
+.hero { background: linear-gradient(135deg, #2b1d16 0%, #4a2e1e 60%, #6b4423 100%); color: #fdf6ec; padding: 58px 0 54px; border-bottom: 6px double #c07a3e; }
+.kicker { letter-spacing: .16em; text-transform: uppercase; font-size: .78rem; color: #e8b07d; font-weight: 700; margin-bottom: 14px; font-family: "Segoe UI", system-ui, sans-serif; }
+.hero h1 { font-size: 2.3rem; line-height: 1.22; margin: 0 0 18px; }
+.lead { font-size: 1.08rem; color: #f3e4cf; }
+.lead a { color: #f0c08a; }
+.cta { display: inline-block; background: #c07a3e; color: #fff8ef; font-weight: 700; font-family: "Segoe UI", system-ui, sans-serif; text-decoration: none; padding: 13px 24px; border-radius: 6px; margin: 14px 12px 0 0; border: 2px solid #c07a3e; }
+.cta:hover { background: #a8662c; }
+.cta.ghost { background: transparent; color: #fdf6ec; border: 2px solid #e8b07d; }
+
+main { padding: 34px 0 10px; }
+section { background: #fffdf8; border: 1px solid #e3d3b8; border-top: 4px solid #c07a3e; border-radius: 4px; padding: 26px 30px; margin-bottom: 22px; box-shadow: 0 2px 8px rgba(43, 29, 22, .08); }
+h2 { color: #4a2e1e; font-size: 1.5rem; margin: 0 0 12px; padding-bottom: 8px; border-bottom: 2px solid #e8b07d; }
+h3 { color: #7a4a22; margin: 20px 0 6px; }
+p { margin: 0 0 14px; }
+p:last-child { margin-bottom: 0; }
+
+table.ledger { width: 100%; border-collapse: collapse; margin: 18px 0 8px; font-size: .96rem; font-family: "Segoe UI", system-ui, sans-serif; }
+table.ledger th { background: #4a2e1e; color: #fdf6ec; text-align: left; padding: 11px 12px; }
+table.ledger td { padding: 11px 12px; border-bottom: 1px solid #e3d3b8; vertical-align: top; }
+table.ledger tr:nth-child(even) td { background: #faf3e5; }
+table.ledger tr:last-child td { border-bottom: 3px double #c07a3e; font-weight: 700; }
+.note { font-size: .88rem; color: #6b543d; font-style: italic; }
+
+ol.checklist { list-style: none; padding: 0; margin: 16px 0; counter-reset: item; }
+ol.checklist li { position: relative; background: #faf3e5; border: 1px solid #e3d3b8; border-left: 5px solid #c07a3e; border-radius: 0 6px 6px 0; padding: 14px 16px 14px 52px; margin-bottom: 10px; }
+ol.checklist li::before { counter-increment: item; content: counter(item); position: absolute; left: 14px; top: 13px; width: 26px; height: 26px; line-height: 26px; text-align: center; background: #4a2e1e; color: #fdf6ec; border-radius: 50%; font-family: "Segoe UI", system-ui, sans-serif; font-weight: 700; font-size: .85rem; }
+
+details { border: 1px solid #e3d3b8; border-radius: 6px; padding: 12px 16px; margin-bottom: 10px; background: #faf3e5; }
+summary { font-weight: 700; color: #4a2e1e; cursor: pointer; }
+details p { margin: 8px 0 0; }
+
+.verdict { background: linear-gradient(135deg, #2b1d16, #4a2e1e); color: #fdf6ec; border: none; border-top: 4px solid #c07a3e; }
+.verdict h2 { color: #f0c08a; border-bottom-color: #c07a3e; }
+.verdict p { color: #f3e4cf; }
+.verdict a { color: #f0c08a; }
+
+footer { background: #2b1d16; color: #e8dcc8; padding: 36px 0 30px; margin-top: 10px; }
+footer h2 { color: #f0c08a; border-bottom: 2px solid #c07a3e; padding-bottom: 8px; font-size: 1.4rem; }
+.explore { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 8px 28px; }
+.explore h3 { color: #e8b07d; font-size: 1rem; margin: 14px 0 6px; font-family: "Segoe UI", system-ui, sans-serif; }
+.explore ul { list-style: none; padding: 0; margin: 0; }
+.explore li { margin-bottom: 4px; }
+.explore a { color: #e8dcc8; text-decoration: none; font-size: .93rem; }
+.explore a:hover { color: #f0c08a; text-decoration: underline; }
+.disclaimer { font-size: .85rem; color: #bfae97; margin-top: 26px; border-top: 1px solid #4a2e1e; padding-top: 16px; }
+
+@media (max-width: 640px) {
+  .hero h1 { font-size: 1.8rem; }
+  section { padding: 20px; }
+  table.ledger { font-size: .85rem; }
+}
